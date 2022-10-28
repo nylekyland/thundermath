@@ -1,0 +1,198 @@
+--CREATES THE TEACHER DATABASE AND ADDS THE TEACHERS
+CREATE TABLE Teachers (TeacherName TEXT, SortOrder INT, Deleted INT);
+INSERT INTO Teachers (TeacherName, SortOrder, Deleted) VALUES ('Mrs. Nyland', 2, 0);
+INSERT INTO Teachers (TeacherName, SortOrder, Deleted) VALUES ('Mrs. Walker', 1, 0);
+INSERT INTO Teachers (TeacherName, SortOrder, Deleted) VALUES ('Mr. Banko', 3, 0);
+INSERT INTO Teachers (TeacherName, SortOrder, Deleted) VALUES ('Mr. Bloomfield', 4, 0);
+
+--CREATES THE CLASS DATABASE AND ADDS THE CLASSES, BASED ON TEACHERID
+CREATE TABLE Classes (ClassName TEXT, TeacherId INT, SortOrder INT, Deleted INT);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('6th Grade', 1, 1, 1);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('7th Grade (A)', 1, 2, 1);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('7th Grade (B)', 1, 3, 1);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('8th Grade', 1, 4, 1);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('WIN', 1, 5, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('Math R.', 2, 1, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('6th Grade (1st Hour)', 3, 1, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('6th Grade (2nd Hour)', 3, 2, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('6th Grade (3rd Hour)', 3, 3, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('7th Grade (5th Hour)', 3, 4, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('6(A) 6th Summer Learning', 4, 1, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('7(A) 6th Summer Learning', 4, 2, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('4(A) 7/8 Summer Learning', 4, 3, 0);
+INSERT INTO Classes (ClassName, TeacherId, SortOrder, Deleted) VALUES ('5(A) 7/8 Summer Learning', 4, 4, 0);
+
+--CREATES THE STUDENTS DATABASE AND ADDS THE STUDENTS, BASED ON CLASSID
+CREATE TABLE Students (StudentName TEXT, ClassId INT, MultiplicationZeroToTwelve INT, MultiplicationZeroToFive INT, AdditionZeroToTen INT, DefaultOperation INT, Deleted INT);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Lamiya F.', 6, 1, 1, 1, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Makayla A.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Quentin B.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Allyson B.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('John C.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('James C.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jessikah C.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Addison D.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kodi D.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Curtis G.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Delaysia H.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Darin H.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Collin J.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Crystal L.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Giselle L.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Lilliana R.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Coltun R.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Shariq S.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Christian S.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Bryce V.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kaia V.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('KeSean W.', 7, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Maleek W.', 7, 1, 1, 0, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Andre A.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Nathniel B.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Shanell B.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Zoe C.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Lavone D.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Levi E.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jayla G.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Da\'Lana H.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Camille H.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('A'Zariah J.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Annabelle J.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Brookyln J.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('John L.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Clare L.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Donavon L.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Amyah L.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Ethan M.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Maurice M.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Chase O.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Laila S.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Raydon S.', 8, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Addison W.', 8, 1, 1, 0, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Malayna A.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Layla B.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('DaKota B.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Lauren D.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Arielle D.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Nikeeya D.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Nicholas F.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Renae G.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Alexander H.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Alaya J.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jahlon L.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Edgar L.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Mellody M.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Hailey M.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Zachary P.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Mayari P.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Haylynn P.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Robert S.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Robert T.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Christian V.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Hannah Y.', 9, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Liam Y.', 9, 1, 1, 0, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jordan A.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Faith A.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Isabella A.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Gabriella B.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('King B.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Sh''Nyah A.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Ke''Myia B.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jayden B.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Caiden C.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Aniya D.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Breana E.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jamiere G.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Michael H.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Brenden M.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kiara O.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kevin P.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Haleigh P.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Alexandrea P.', 10, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Chloe T.', 10, 1, 1, 0, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Makayla A.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Paige B.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Nikeeya D.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Lamiya F.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Antonio F.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Braylon J.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kaylin L.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Maurice M.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jamal N.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kody O.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTex, DefaultOperation, Deleted) VALUES ('Aubriana R.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Gage S.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Keira S.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Harmony S.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Chloe T.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Macarthur W.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Hannah Y.', 5, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Qamarah Z.', 5, 1, 1, 0, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Andre A.', 11, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kaylee A.', 11, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Noah B.', 11, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Damien B.', 11, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kaeden C.', 11, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Darin H.', 11, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('A''Zariah J.', 11, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Zariah M.', 11, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Robert T.', 11, 1, 1, 0, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Lavone D.', 12, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Alexander H.', 12, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Elijah H.', 12, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Amyah L.', 12, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Honesty M.', 12, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Haylynn P.', 12, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Gage S.', 12, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Keira S.', 12, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Maleek W.', 12, 1, 1, 0, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Christian B.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Christian C.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Tatiana C.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Lamiya F.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Antonio F.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Madison G.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Rhylin H.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Braylon J.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Roderick M.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Amanda P.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Tristan R.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kardeaira S.', 13, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jordan W.', 13, 1, 1, 0, 1, 0);
+
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Antonio A.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Jordan A.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Sydney A.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Benjamin B.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kendal C.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Joshua H.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Blake H.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Kiara K.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Amir M.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Shawn P.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Christian T.', 14, 1, 1, 0, 1, 0);
+INSERT INTO Students (StudentName, ClassId, MultiplicationZeroToTwelve, MultiplicationZeroToFive, AdditionZeroToTen, DefaultOperation, Deleted) VALUES ('Noah W.', 14, 1, 1, 0, 1, 0);
+
+
+-- ADD A COLUMN INTO Data THAT TRACKS STUDENTID
+ALTER TABLE Data ADD COLUMN StudentId INT;
+ALTER TABLE Data ADD COLUMN TeacherId INT;
+ALTER TABLE Data ADD COLUMN ClassId INT;
+
+-- UPDATE OLD DATA BASED OFF OF STUDENTID
+UPDATE Data SET StudentId = (SELECT ROWID FROM Students WHERE StudentName = Data.StudentName) WHERE EXISTS (SELECT ROWID FROM Students WHERE StudentName = Data.StudentName);
+UPDATE Data SET TeacherId = (SELECT ROWID FROM Teachers WHERE TeacherName = Data.TeacherName) WHERE EXISTS (SELECT ROWID FROM Teachers WHERE TeacherName = Data.TeacherName);
+UPDATE Data SET ClassId = (SELECT ROWID FROM Classes WHERE ClassName = Data.Class) WHERE EXISTS (SELECT ROWID FROM Classes WHERE ClassName = Data.Class);
+
+-- CREATE USERS?
+-- DON'T DO THIS PART YET!!
+CREATE TABLE Users (FirstName TEXT, LastName TEXT, EmailAddress TEXT, Deleted INT);
+INSERT INTO Users (FirstName, LastName, EmailAddress, Deleted) VALUES ('Kyle', 'Nyland', 'nylandkc@gmail.com', 0);

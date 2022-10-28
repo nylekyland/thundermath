@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Math Facts! | Admin</title>
+		<link rel="stylesheet" href="style.css"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+		<script src="script-admin.js"></script>
+		<meta charset="UTF-8">
+	</head>
+  <body>
+    <div id="pageDiv" style="display: none;">
+      <h1>Math Facts!</h1>
+      <table id="settingsTable" class="fullWidth fixedTable">
+        <tr>
+          <td><select id="className" class="className" onchange="changedClass()"></select></td>
+        </tr>
+      </table>
+      <div id="gd"></div>
+      <table class="fullWidth fixedTable">
+        <tr>
+          <td id="currentFilter" class="bold centered" colspan="10">
+            <a class="underline" onclick="clickedAllResults()">Results for </a>
+          </td>
+        </tr>
+      </table>
+      <table class="fullWidth fixedTable" id="monthLinks" style="display: none;">
+        <tr>
+          <td class="underline bold centered" onclick="clickedPreviousMonth()" colspan="3">&larr; Previous Month</td>
+          <td id="monthAndYearLabel" class="bold centered" colspan="4"></td>
+          <td class="underline bold centered" onclick="clickedNextMonth()" colspan="3">Next Month &rarr;</td>
+        </tr>
+      </table>
+      <table class="fullWidth" id="jsonTable">
+        <tr>
+          <!--<td class="bold">ID</td>-->
+          <td class="bold">Date</td>
+          <td class="bold">Student Name</td>
+          <td class="bold">Teacher Name</td>
+          <td class="bold">Class</td>
+          <td class="bold">Correct Answers</td>
+          <td class="bold">Questions Answered</td>
+          <td class="bold">Percentage</td>
+          <td class="bold">Time Elapsed</td>
+          <td class="bold">Operation</td>
+          <td class="bold">Smart Score</td>
+        </tr>
+      </table>
+    </div>
+    <div id="errorDiv" style="display: none;">
+      <p>
+        Could not authenticate ☹️ (did you type the password correctly?)
+      </p>
+    </div>
+  </body>
+</html>

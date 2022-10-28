@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thunder Math | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math.ico?v=1666832675071">
+    <script src="script.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      as="style"
+      rel="stylesheet prefetch"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="sideNav" class="sideNav">
+      <div
+        href="javascript:void(0)"
+        class="closeSideNavButton"
+        onclick="closeSideNav()"
+      >
+        <i class="fa fa-times"></i>
+      </div>
+      <h3 onclick="navigate('home')">
+        <img
+          class="logo"
+          src="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math.png?v=1666793207418"
+        />
+        Home
+      </h3>
+      <h3 onclick="navigate('news')"><i class="fa fa-newspaper"></i> News</h3>
+    </div>
+    <div class="background">
+      <header>
+        <div onclick="navigate('home')">
+          <img
+            class="logo"
+            src="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math.png?v=1666793207418"
+          />
+          <h3>Thunder Math</h3>
+        </div>
+        <div class="bars" onclick="openSideNav()">
+          <i class="fa fa-bars"></i>
+        </div>
+      </header>
+      <div id="title" class="content">
+        <div id="titleDiv">
+          <img
+            id="titleLogo"
+            src="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math-blue.png?v=1666795089466"
+          />
+          <h3 id="titleText">Thunder Math</h3>
+        </div>
+        <p>
+          Test your math skills! Answer the math fact by typing in the correct
+          answer and pressing Enter.
+        </p>
+        <p>
+          Answer as many questions correctly as you can before time runs out!
+        </p>
+        <div class="buttonDiv">
+          <button
+            id="quickStart"
+            class="button-big"
+            onclick="hideClassSettings()"
+          >
+            Quick Start
+          </button>
+          <button
+            id="chooseAClass"
+            class="button-big inactive-button"
+            onclick="showClassSettings()"
+          >
+            Choose a Class
+          </button>
+        </div>
+        <div>
+          <table id="settingsTable">
+            <tr id="teacherSettings" style="display: none">
+              <td class="bold">Teacher:</td>
+              <td colspan="3" class="gray">
+                <select
+                  name="teacher"
+                  id="teacher"
+                  onchange="changedTeacher()"
+                ></select>
+              </td>
+            </tr>
+            <tr id="classSettings" style="display: none">
+              <td class="bold">Class:</td>
+              <td class="gray" colspan="3">
+                <select
+                  class="className"
+                  name="className"
+                  id="className"
+                  onchange="changedClass()"
+                ></select>
+              </td>
+            </tr>
+            <tr id="childSettings" style="display: none">
+              <td class="bold">Name:</td>
+              <td class="gray" colspan="3">
+                <select
+                  name="childName"
+                  id="childName"
+                  onchange="changedName()"
+                ></select>
+              </td>
+            </tr>
+            <tr>
+              <td class="bold">Operation:</td>
+              <td colspan="3" class="gray">
+                <div class="operationTable">
+                  <div class="operationBorder">
+                    <div class="operationHeader">Multiplication</div>
+                    <div class="buttonDiv">
+                      <button
+                        id="multiplicationButton"
+                        class="button"
+                        type="button"
+                        onclick="clickMultiplicationOperation()"
+                      >
+                        0 - 12
+                      </button>
+                      <button
+                        id="multiplicationButton2"
+                        class="button inactive-button"
+                        type="button"
+                        onclick="clickMultiplicationOperation2()"
+                      >
+                        0 - 5
+                      </button>
+                    </div>
+                  </div>
+                  <div class="operationBorder">
+                    <div class="operationHeader">Addition</div>
+                    <div class="buttonDiv">
+                      <button
+                        id="additionButton"
+                        class="button inactive-button"
+                        type="button"
+                        onclick="clickAdditionOperation()"
+                      >
+                        0 - 10
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="buttonDiv"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="bold">Time:</td>
+              <td class="gray" id="time">4 Minutes</td>
+            </tr>
+            <tr>
+              <td class="bold">Questions:</td>
+              <td class="gray" id="questions">100 Questions</td>
+            </tr>
+          </table>
+        </div>
+        <div class="errorDiv">
+          <div id="classNameError" class="errorText" style="display: none">
+            Please select a class.
+          </div>
+          <div id="childNameError" class="errorText" style="display: none">
+            Please select a name.
+          </div>
+        </div>
+        <div class="buttonDiv">
+          <button class="button-big" id="startButton" onclick="startGame()">
+            Click to Start!
+          </button>
+        </div>
+      </div>
+      <div id="game" class="content">
+        <div class="gameArea" id="gameArea">
+          <div id="header">
+            <h3 id="currentQuestionNumber"></h3>
+            <h3 class="floatRight" id="timer"></h3>
+          </div>
+          <div id="main-game">
+            <table id="mathTable">
+              <tr>
+                <td></td>
+                <td class="num" id="firstNum"></td>
+              </tr>
+              <tr class="bottomNum">
+                <td id="operationSymbol"></td>
+                <td class="num" id="secondNum"></td>
+              </tr>
+              <tr class="answer">
+                <td class="hiddenInput">
+                  <input
+                    type="number"
+                    id="text-input"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                  />
+                </td>
+                <td colspan="2" class="num" id="answerNum"></td>
+              </tr>
+            </table>
+            <div class="num" id="symbol"></div>
+          </div>
+        </div>
+      </div>
+      <div id="results" class="content">
+        <div id="resultsArea">
+          <div id="header">
+            <span id="timesUp"></span>
+          </div>
+          <div id="resultsTable">
+            <div colspan="2" id="chart">
+              <div id="gd"></div>
+            </div>
+            <div id="smartScoreBox" class="operationBorder">
+              <h2>
+                You got a
+                <span class="dottedUnderline"
+                  >Smart Score
+                  <div class="tooltip">
+                    <div class="tooltip-inner">
+                      Smart Score is defined as the average of your accuracy
+                      (number correct / number answered) and the completion
+                      (number correct / total number of questions)
+                    </div>
+                  </div></span
+                >
+                of:
+              </h2>
+              <h2>
+                <span id="smartScore"></span>
+              </h2>
+            </div>
+            <div id="resultsGrids">
+              <div>
+                <table class="resultsTable">
+                  <tr id="teacherResults">
+                    <td class="bold">Teacher:</td>
+                    <td class="gray" colspan="3" id="teacherGrid"></td>
+                  </tr>
+                  <tr id="classResults">
+                    <td class="bold">Class:</td>
+                    <td class="gray" colspan="3" id="classGrid"></td>
+                  </tr>
+                  <tr id="childResults">
+                    <td class="bold">Name:</td>
+                    <td class="gray" colspan="3" id="nameGrid"></td>
+                  </tr>
+                  <tr>
+                    <td class="bold">Operation:</td>
+                    <td class="gray" colspan="3" id="operationGrid"></td>
+                  </tr>
+                  <tr>
+                    <td class="bold">Time:</td>
+                    <td class="gray" colspan="3" id="timeGrid"></td>
+                  </tr>
+                  <tr>
+                    <td class="bold">Questions:</td>
+                    <td class="gray" colspan="3" id="totalQuestionsGrid"></td>
+                  </tr>
+                  <tr>
+                    <td class="bold">Results:</td>
+                    <td class="gray" colspan="3" id="questionsGrid"></td>
+                  </tr>
+                  <tr>
+                    <td class="bold">Accuracy:</td>
+                    <td class="gray" colspan="3" id="correctPercentage"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <button
+            class="button-big"
+            type="button"
+            id="playAgainButton"
+            onclick="playAgain()"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h3><a href="https://kylenyland.com/" target="_blank"><div class="footer-text">© Kyle Nyland 2022</div></a></h3>
+      <span class="separator">|</span>
+      <h3>
+        <div class="footer-text" onclick="toggleKofi()">
+          <img
+            class="kofi-cup"
+            src="https://storage.ko-fi.com/cdn/cup-border.png"
+          />
+          <span>Support This Site</span>
+        </div>
+        <div id="kofi">
+          <div id="kofi-close" onclick="toggleKofi()">&times;</div>
+          <iframe
+            id="kofiframe"
+            src="https://ko-fi.com/nylekyland/?hidefeed=true&widget=true&embed=true&preview=true"
+            style="border: none; border-radius: 6px; height: 85vmin"
+            title="nylekyland"
+          ></iframe>
+        </div>
+      </h3>
+    </footer>
+  </body>
+</html>
