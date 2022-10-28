@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thunder Math | News</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math.ico?v=1666832675071">
+    <script src="script.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      as="style"
+      rel="stylesheet prefetch"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="sideNav" class="sideNav">
+      <div href="javascript:void(0)" class="closeSideNavButton" onclick="closeSideNav()"><i class="fa fa-times"></i></div>
+      <h3 onclick="navigate('home')"><img class="logo" src="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math.png?v=1666793207418"> Home</h3>
+      <h3 onclick="navigate('news')"><i class="fa fa-newspaper"></i> News</h3>
+    </div>
+    <div class="background">
+      <header>
+        <div onclick="navigate('home')">
+          <img class="logo" src="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math.png?v=1666793207418" />
+          <h3>Thunder Math</h3>
+        </div>
+        <div class="bars" onclick="openSideNav()">
+          <i class="fa fa-bars"></i>
+        </div>
+      </header>
+      <div id="title" class="content">
+        <div class="news">
+          <div class="operationBorder" id="news1">
+            <img src="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math-blue.png?v=1666795089466" />
+          <h3>
+            Thunder Math 1.0 Launched!
+            </h3>
+            <p>
+              <b>10/26/2022</b>
+            </p>
+            <p>
+              this is the text of the article. i released thunder math 1.0! there were a bunch of changes that i made to the original version hosted on glitch. 
+              i fixed some bugs and made the site look better. you can also play on a mobile device!
+              <span class="moreText">this is the "more" text!</span>
+              <span class="readMore" onclick="toggleReadMore('news1')">Read More</span>
+            </p>
+          </div>
+        </div>
+        <!--<div id="titleDiv">
+          <img id="titleLogo" src="https://cdn.glitch.global/8bd50961-ee0f-451a-aa08-6982b96de4f1/thunder-math-blue.png?v=1666795089466">
+          <h3 id="titleText">Thunder Math</h3>
+        </div>-->
+      </div>
+    </div>
+    <footer>
+      <h3><a href="https://kylenyland.com/" target="_blank"><div class="footer-text">© Kyle Nyland 2022</div></a></h3>
+      <span class="separator">|</span>
+      <h3>
+        <div class="footer-text" onclick="toggleKofi()">
+          <img
+            class="kofi-cup"
+            src="https://storage.ko-fi.com/cdn/cup-border.png"
+          />
+          <span>Support This Site</span>
+        </div>
+        <div id="kofi">
+          <div id="kofi-close" onclick="toggleKofi()">&times;</div>
+          <iframe
+            id="kofiframe"
+            src="https://ko-fi.com/nylekyland/?hidefeed=true&widget=true&embed=true&preview=true"
+            style="border: none; border-radius: 6px; height: 85vmin"
+            title="nylekyland"
+          ></iframe>
+        </div>
+      </h3>
+    </footer>
+  </body>
+</html>

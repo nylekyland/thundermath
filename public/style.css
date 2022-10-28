@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Krona+One&family=Lato&display=swap');
+
+body{
+	font-family: "Lato", sans-serif;
+  margin: 0;
+  background-color: #4169E120;
+}
+
+select{
+  font-family: "Lato", sans-serif;
+}
+
+/*
+.background{
+	width: 100%;
+  display: grid;
+}
+*/
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100%;
+  margin: 10vh 0;
+}
+
+.gameArea{
+	width: 100%;
+	margin: 0 auto;
+}
+
+p{
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: .5em;
+  max-width:800px;
+  margin: 20px auto 0px;
+}
+
+#main-game{
+  display: flex;
+  justify-content: center;
+}
+
+#mathTable{
+	font-size: 21.2vmin;
+	border-collapse: collapse;
+	width: 50%;
+  margin-left: 21.2vmin;
+}
+
+tr.bottomNum td{
+	border-bottom: 12px solid;
+}
+
+td.num{
+	text-align: right;
+}
+
+div#symbol.num{
+	font-size: 21.2vmin;
+	position: relative;
+  text-align: center;
+  width: 21.2vmin;
+  align-self: flex-end;
+}
+
+.green{
+	color: #82c91e !important;
+}
+
+.red{
+	color: #c91e2d !important;
+}
+
+.ghost{
+	color: #00000033;
+}
+
+div#header{
+  font-size: 2vh;
+  text-align: left;
+  font-family: 'Krona One', sans-serif;
+  color: white;
+  height: 5vh;
+  line-height: 5vh;
+  background-color: royalblue;
+  width: 100%;
+  position: fixed;
+  top: 5vh;
+  z-index: 99;
+  text-transform: lowercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+#currentQuestionNumber{
+  margin: 0;
+  padding: 0 0.5em;
+	display: inline-block;
+  font-weight: bold;
+}
+
+#timesUp{
+  margin: 0 auto;
+  padding: 0 0.5em;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#timer{
+  margin: 0;
+  padding: 0 0.5em;
+	display: inline-block;
+  font-weight: bold;
+}
+
+.hiddenInput{
+  opacity: 0;
+  width: 0;
+  position: absolute;
+}
+
+/*
+	Title Style
+*/
+
+h1{
+	font-size: 8em;
+	margin: 0;
+	text-align: center;
+	font-family: 'Krona One', sans-serif;
+	color: white;
+	background-color: royalblue;
+	text-transform: uppercase;
+}
+
+#titleDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#titleLogo{
+  height: 32vmin;
+  vertical-align: middle;
+}
+
+#titleText{
+  font-family: 'Krona One', sans-serif;
+  color: royalblue;
+  text-transform: lowercase;
+  font-size: 12vmin;
+  width: 64vh;
+  margin: 0;
+  vertical-align: middle;
+}
+
+header{
+  font-size: 2vh;
+  text-align: left;
+  font-family: 'Krona One', sans-serif;
+  color: white;
+  height: 5vh;
+  line-height: 5vh;
+  background-color: royalblue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 2em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+footer{
+  font-size: 1.5vh;
+  text-align: left;
+  font-family: 'Krona One', sans-serif;
+  color: white;
+  height: 5vh;
+  line-height: 5vh;
+  background-color: royalblue;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  cursor: default;
+}
+
+footer h3 {
+  margin: 0;
+  text-transform: lowercase;
+  display: inline-block;
+  transition: 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+
+footer h3 a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-text{
+  transition: 0.2s;
+  padding: 0 0.5em;
+}
+
+footer .footer-text:hover{
+  background-color: #557DF5;
+}
+
+.kofi-cup{
+  vertical-align: middle;
+  height: 2vh;
+  animation: kofi-wiggle 3s infinite;
+}
+
+@keyframes kofi-wiggle{0%{transform:rotate(0) scale(1)}60%{transform:rotate(0) scale(1)}75%{transform:rotate(0) scale(1.12)}80%{transform:rotate(0) scale(1.1)}84%{transform:rotate(-10deg) scale(1.1)}88%{transform:rotate(10deg) scale(1.1)}92%{transform:rotate(-10deg) scale(1.1)}96%{transform:rotate(10deg) scale(1.1)}100%{transform:rotate(0) scale(1)}}
+@keyframes thunder-wiggle{0%{transform:rotate(0)} 25%{transform:rotate(-30deg)} 50%{transform:rotate(0)} 75%{transform:rotate(30deg)} 100%{transform:rotate(0)}}
+
+#kofi{
+  display: none;
+  position: fixed;
+  bottom: 6vh;
+  right: 1vh;
+  border-radius: 6px;
+  padding: 4px;
+  background-color: royalblue;
+  cursor: default;
+  box-shadow: 0px 1px 5px #000000bb;
+}
+
+#kofi-close{
+  position: absolute;
+  right: 7%;
+  font-size: 32px;
+  color: royalblue;
+  cursor: pointer;
+}
+
+header h3 {
+  margin: 0;
+  text-transform: lowercase;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+footer .separator {
+  margin: 0 0.5em;
+}
+
+header div{
+    transition: .2s;
+}
+
+header div:hover{
+  background-color: #557DF5;
+}
+
+header div:hover .logo{
+  animation: thunder-wiggle 0.125s 2;
+}
+
+header .bars{
+  display: inline-block;
+  width: 5vh;
+  height: 5vh;
+  float: right;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+header .bars:hover{
+  background-color: #557DF5;
+}
+
+.button-big{
+	padding: 10px;
+	font-size: 1.5em;
+	border-radius: 8px;
+	background-color: royalblue;
+	border: 0px solid royalblue;
+	color: white;
+	font-family: 'Krona One', sans-serif;
+	text-transform: lowercase;
+	margin: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.button-big:hover:not(.inactive-button){
+  background-color: #1941B9;
+}
+
+.button{
+  padding: 10px;
+  font-size: 1.15em;
+  border-radius: 8px;
+  background-color: royalblue;
+  border: 0px solid royalblue;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button:hover:not(.inactive-button){
+  background-color: #1941B9;
+}
+
+.buttonDiv{
+  display: flex;
+  justify-content: center;
+	text-align: center;
+}
+
+.inactive-button{
+  background-color: gray;
+  opacity: 0.7;
+  transition: .2s;
+}
+
+.inactive-button:hover:not(:disabled){
+  background-color: royalblue;
+  opacity: 1;
+}
+
+.button:disabled{
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.errorDiv{
+  margin: 0 auto;
+}
+
+.operationTable{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.operationBorder{
+  border: 3px solid royalblue;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  background-color: white;
+}
+
+.operationHeader{
+  padding: 2px 5px;
+  font-size: 1em;
+  color: royalblue;
+  font-family: 'Krona One', sans-serif;
+  text-transform: lowercase;
+  margin: 5px 0px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#settingsTable{
+	margin: 20px auto;
+	font-size: 1.25em;
+}
+
+.bold{
+	font-weight: bold;
+	background-color: #4169E133;
+	padding: 15px;
+}
+
+.gray{
+	background-color: #b0b0b033;
+	padding: 15px;
+}
+
+.floatRight{
+	float: right;
+}
+
+.className{
+	font-size: 1.1em;
+	width: 100%;
+}
+
+#childName{
+	font-size: 1.1em;
+	width: 100%;
+}
+
+#teacher{
+  font-size: 1.1em;
+  width: 100%;
+}
+
+.operation{
+  font-size: 1.1em;
+  width: 100%;
+}
+
+.errorText{
+  color: #c91e2d;
+}
+
+.errorShadow{
+  box-shadow: 0px 0px 7px #c91e2d;
+}
+
+/*
+	Results Area
+*/
+
+#results{
+  display: none;
+}
+
+#game {
+  display: none;
+}
+
+#resultsArea{
+	text-align: center;
+}
+
+.half{
+	margin: 0 auto;
+	width: 49%;
+	display: inline-block;
+	table-layout:fixed;
+}
+
+.resultsTable{
+	margin: 0 auto;
+	font-size: 1.25em;
+}
+
+.greenFact{
+	background-color: #00800033;
+}
+
+.redFact{
+	background-color: #ff000033;
+}
+.grayFact{
+	background-color: #b0b0b033;
+}
+
+.blue{
+  color: #4169E1;
+  font-weight: bold;
+  border: 1px solid;
+  padding: 3px;
+}
+
+#smartScore{
+  font-size: 6em;
+  color: #4169E1;
+}
+
+#resultsTable{
+  margin: 30px auto;
+	font-size: 1.25em;
+  font-family: 'Lato', sans-serif;
+	width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dottedUnderline{
+  border-bottom: 4px dashed;
+  position: relative;
+}
+
+#smartScoreBox{
+  width: 25em;
+  max-height: 16em;
+}
+
+.tooltip{
+  visibility: hidden;
+  width: min(500px, 100vw);
+  background-color: royalblue;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  z-index: 99;
+  bottom: 100%;
+  left: 50%;
+  margin-left: max(-250px, -65vw);
+  box-shadow: 0px 1px 5px #000000bb;
+}
+
+.tooltip-inner {
+  color: black;
+  background-color: white;
+  border-radius: 6px;
+  padding: 6px;
+  border: 3px solid royalblue;
+}
+
+.tooltip span {
+  background-color: white;
+}
+
+.dottedUnderline:hover .tooltip {
+  visibility: visible;
+}
+
+/*
+  Admin CSS
+*/
+.fullWidth{
+  width: 100%;
+}
+
+.centered{
+  text-align: center;
+}
+
+.underline{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#gd{
+  margin: 0 auto;
+  max-width: 95vw;
+}
+
+.fixedTable{
+  table-layout: fixed;
+}
+
+/*
+ SIDE NAVIGATION
+*/
+
+.sideNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  background-color: royalblue;
+  overflow-x: hidden;
+  transition: 0.2s;
+  padding-top: 5vh;
+  box-shadow: 0px 1px 5px #000000bb;
+}
+
+.sideNav .closeSideNavButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 2vh;
+  width: 5vh;
+  height: 5vh;
+  line-height: 5vh;
+  margin: 0;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.sideNav .closeSideNavButton:hover{
+  background-color: #557DF5;
+}
+
+.sideNav h3{
+  color: white;
+  font-family: 'Krona One', sans-serif;
+  font-weight: bold;
+  text-transform: lowercase;
+  cursor: pointer;
+  padding: 2.5vh 0;
+  margin: 0;
+}
+
+.sideNav h3:hover{
+  background-color: #557DF5;
+}
+
+.sideNav h3 i {
+  font-size: 1.6em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
+/*
+NEWS
+*/
+.news {
+  width: min(80vw, 800px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.news h3{
+  color: royalblue;
+  font-family: 'Krona One', sans-serif;
+  text-transform: lowercase;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.news p {
+  font-size: 1em;
+  text-align: left;
+  margin: 1em 0 1em;
+}
+
+.news img {
+  display: block;
+  max-height: 25vh;
+  margin: 0 auto;
+}
+
+.news p .readMore {
+  margin: 1em 0;
+  display: block;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.news p .moreText {
+  display: none;
+  margin: 1em 0;
+}
